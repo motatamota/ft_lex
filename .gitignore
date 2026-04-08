@@ -1,0 +1,8 @@
+# Build artifacts
+*.o
+*.d
+ft_lex
+
+# Editor / OS
+.vscode/
+.DS_Store
