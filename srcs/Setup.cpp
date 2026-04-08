@@ -2,7 +2,7 @@
 
 #include <sstream>
 
-std::vector<std::string> Setup::SplitLexText(const std::string &input)
+std::vector<std::string> Setup::SplitLexText(const std::string& input)
 {
 	std::istringstream iss(input);
 

@@ -12,5 +12,6 @@ class GenerateFile
 		GenerateFile &operator=(const GenerateFile &other) = default;
 		~GenerateFile() = default;
 
+		void Generate(const std::vector<dfa_node>& dfa_data, const std::vector<std::string>& file_data);
 	private:
 };

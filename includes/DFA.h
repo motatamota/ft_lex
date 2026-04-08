@@ -4,6 +4,9 @@
 #include <vector>
 #include "NFA.h"
 
+struct dfa_node {
+};
+
 class DFA
 {
 	public:
@@ -12,5 +15,6 @@ class DFA
 		DFA &operator=(const DFA &other) = default;
 		~DFA() = default;
 
+		std::vector<dfa_node> NFAToDFA(const std::vector<nfa_node>& nfa_data);
 	private:
 };

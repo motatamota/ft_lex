@@ -3,6 +3,12 @@
 #include <string>
 #include <vector>
 
+enum text_type {
+	PREFIX,
+	DATA,
+	SUFFIX,
+};
+
 class Setup
 {
 	public:
