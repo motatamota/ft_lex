@@ -10,14 +10,13 @@
 
 int main(int ac, char **av)
 {
-	(void) av;
 	if (ac != 2)
 	{
 		std::cerr << "Argument error" << std::endl;
 		exit(1);
 	}
 
-	std::ifstream ifs("input.l");
+	std::ifstream ifs(av[1]);
 	std::string f_data((std::istreambuf_iterator<char>(ifs)),
 						std::istreambuf_iterator<char>());
 
