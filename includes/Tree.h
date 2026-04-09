@@ -2,6 +2,8 @@
 
 #include <string>
 #include <vector>
+#include <map>
+#include <sstream>
 #include <memory>
 
 enum tree_node_type {
@@ -30,6 +32,15 @@ class Tree
 		Tree &operator=(const Tree &other) = default;
 		~Tree() = default;
 
-		std::vector<tree_node> StringToTree(const std::string& input);
+		std::vector<tree_node> StringToTree(const std::vector<std::string>& input, const std::string& filename);
 	private:
+		void SetDefine(const std::string& str, const std::string& filename);
+		std::vector<tree_node> Parse(const std::string& str);
+		void CreateNode(const std::string& str, const std::string& filename);
+		std::string ExpandDefine(const std::string& val);
+		bool IsValidName(const std::string& name);
+		void PrintError(const std::string& filename, int line_num, const std::string& msg);
+
+		std::map<std::string, std::string> define_map_{};
+		std::string c_prefix_{};
 };

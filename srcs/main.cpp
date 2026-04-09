@@ -28,7 +28,7 @@ int main(int ac, char **av)
 
 	// 0:プレフィックス、1:データ、2:サフィックス
 	auto split_text = setup.SplitLexText(f_data);
-	auto tree_data = tree.StringToTree(split_text[text_type::DATA]);
+	auto tree_data = tree.StringToTree(split_text);
 	auto nfa_data = nfa.TreeToNFA(tree_data);
 	auto dfa_data = dfa.NFAToDFA(nfa_data);
 	generate_file.Generate(dfa_data, split_text);
